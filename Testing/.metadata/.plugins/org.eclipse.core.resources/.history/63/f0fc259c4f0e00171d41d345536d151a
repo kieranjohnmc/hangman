@@ -1,0 +1,22 @@
+package Testing;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+public class RoboMan {
+
+	public static void main(String[] args) {
+		try {
+			Robot robot = new Robot();
+			
+			robot.keyPress(KeyEvent.VK_5);
+		
+			
+		} catch (AWTException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

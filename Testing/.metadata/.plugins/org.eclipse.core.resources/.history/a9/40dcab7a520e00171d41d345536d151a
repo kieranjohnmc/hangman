@@ -1,0 +1,10 @@
+package Testing;
+
+import java.awt.Robot;
+
+public class autoClick 
+{
+	
+	public static void LeftClick(Robot robot)
+	
+}

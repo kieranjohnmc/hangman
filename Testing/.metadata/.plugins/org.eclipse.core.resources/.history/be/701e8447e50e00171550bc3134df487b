@@ -1,0 +1,23 @@
+package Testing;
+
+import java.awt.Robot;
+
+public class RobotProgram
+{
+	
+	private Robot robot;
+	private AutoClicker autoClick;
+	private Runtime runtime;
+	
+	public void drawSine()
+	{
+		int xSet = 1500;
+		int ySet = 500;
+		int x = 0;
+		int y = 0;
+		double alpha = 0;
+		
+		
+	}
+	
+}
