@@ -1,0 +1,43 @@
+package Testing;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.io.IOException;
+
+public class RobotProgram
+{
+	
+	private Robot robot;
+	private AutoClicker autoClick;
+	private Runtime runtime;
+	
+	public void drawSine()
+	{
+		int xSet = 800;
+		int ySet = 400;
+		int x = 0;
+		int y = 0;
+		double alpha = 0;
+		runtime = Runtime.getRuntime();
+		
+		try {
+			robot = new Robot();
+		    } catch (AWTException e) 
+		            {
+			          e.printStackTrace();
+	                }
+		
+			try {
+				runtime.exec("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+			} catch (IOException e) 
+			{
+				e.printStackTrace();
+			}
+			
+			robot.delay(5000);
+			
+	}
+	
+	
+	
+}

@@ -1,0 +1,67 @@
+package Testing;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+
+public class RobotProgram
+{
+	
+	private Robot robot;
+	private AutoClicker autoClick;
+	private Runtime runtime;
+	
+	public void drawSine()
+	{
+		int xSet = 800;
+		int ySet = 400;
+		int x = 0;
+		int y = 0;
+		double alpha = 0;
+		runtime = Runtime.getRuntime();
+		
+		try {
+			robot = new Robot();
+			
+		    } catch (AWTException e) 
+		            {
+			          e.printStackTrace();
+	                }
+		
+			try {
+				runtime.exec("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+			} catch (IOException e) 
+			{
+				e.printStackTrace();
+			}
+			
+			robot.delay(1000);
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_L);
+		    robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_L);
+		System.out.println("entering firefox");
+			
+			robot.delay(1000);
+			
+			StringBuilder url = new StringBuilder ("www.google.com"); 
+			int stringLength = url.length();
+		    for (int i = 0 ; i < stringLength ; i++)
+		    {	
+			robot.keyPress(url.charAt(i));
+			//robot.delay(1000);
+			System.out.print(url.charAt(i));
+			robot.keyRelease(url.charAt(i));
+			robot.delay(1000);
+
+		    }
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			
+		    	
+	}
+	
+	
+	
+}
