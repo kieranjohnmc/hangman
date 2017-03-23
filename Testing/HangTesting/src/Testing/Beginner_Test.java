@@ -55,7 +55,7 @@ public class Beginner_Test
 		        robot.mouseMove(129, 129);
 		        robot.mousePress(BUTTON1_DOWN_MASK);
 		        robot.delay(1000);
-		        robot.mouseMove(122, 189);
+		        robot.mouseMove(137, 150);
 		        robot.mouseRelease(BUTTON1_DOWN_MASK);
 		        robot.delay(1000);
 		        robot.mouseMove(165, 165);

@@ -1,0 +1,26 @@
+package Testing;
+import static org.junit.Assert.*;
+import org.junit.Test;
+import org.junit.rules.ErrorCollector;
+import org.junit.Rule;
+import org.junit.Assert;
+public class JUnit_Test 
+{
+   @Rule
+   public ErrorCollector ec= new ErrorCollector();
+   @Test
+   public void Beginner_Test()
+   {
+	   Junit_Difficulty_Test junit= new Junit_Difficulty_Test();
+	   String actual_result = JUnit_Test.Beginner();
+	   String expected_result = "";
+	   try{
+		   Assert.assertEquals( expected_result, actual_result);
+	   }catch(Throwable t)
+	   {
+		   System.out.println("Caught and Error");
+		   ec.addError(t);
+	   }
+	   System.out.println("Comparison Done");
+   }
+}

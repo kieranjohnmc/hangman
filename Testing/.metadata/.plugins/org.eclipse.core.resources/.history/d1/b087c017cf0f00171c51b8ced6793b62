@@ -20,13 +20,13 @@ public class Main {
 				break;
 		case 3: Hard();
 				break;
-		default: 
+		
 		}
         System.out.println(testString); 
         input.close();
 	}
 		
-	public static void Easy() {
+	private static void Easy() {
 		Beginner_Test robotprogramme = null;
 		try {
 			robotprogramme = new Beginner_Test();
@@ -34,10 +34,9 @@ public class Main {
 			e.printStackTrace();
 		}
 		robotprogramme.beginnerDifficulty();
-		
 	}
 	
-	public static void Intermediate() {
+	private static void Intermediate() {
 		Intermediate_Test robotprogramme = null;
 		try {
 			robotprogramme = new Intermediate_Test();
@@ -48,7 +47,7 @@ public class Main {
 	
 	}
 	
-	public static void Hard() {
+	private static void Hard() {
 		Hard_Difficulty robotprogramme = null;
 		try {
 			robotprogramme = new Hard_Difficulty();

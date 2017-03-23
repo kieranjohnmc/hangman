@@ -7,19 +7,20 @@ import java.io.IOException;
 import static java.awt.event.KeyEvent.*;
 
 
-public class Hard_Difficulty
+public class Beginner_Test
 {
 
+	
 	private Robot robot;
 	private AutoClicker autoClick;
 	private Runtime runtime;
 	
-	public void hardDifficulty() 
+	public void beginnerDifficulty() 
 	{
 		runtime = Runtime.getRuntime();
-		Hard_Difficulty keyboard = null;
+		Beginner_Test keyboard = null;
 		try {
-			keyboard = new Hard_Difficulty();
+			keyboard = new Beginner_Test();
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}
@@ -33,7 +34,7 @@ public class Hard_Difficulty
         	    //The Text to be entered
 		keyboard.type("Callum");	
 	}
-	public Hard_Difficulty() throws AWTException 
+	public Beginner_Test() throws AWTException 
 	{
 		this.robot = new Robot();
 	}

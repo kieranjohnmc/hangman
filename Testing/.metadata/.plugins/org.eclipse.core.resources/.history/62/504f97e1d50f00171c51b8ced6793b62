@@ -37,7 +37,7 @@ public class Main {
 		
 	}
 	
-	public static void Intermediate() {
+	private static void Intermediate() {
 		Intermediate_Test robotprogramme = null;
 		try {
 			robotprogramme = new Intermediate_Test();
@@ -48,7 +48,7 @@ public class Main {
 	
 	}
 	
-	public static void Hard() {
+	private static void Hard() {
 		Hard_Difficulty robotprogramme = null;
 		try {
 			robotprogramme = new Hard_Difficulty();
