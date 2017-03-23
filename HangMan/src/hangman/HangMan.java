@@ -7,6 +7,10 @@ package hangman;
 
 import java.io.IOException;
 import java.util.HashSet;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import sun.applet.Main;
 
 /**
  *
@@ -21,5 +25,23 @@ public class HangMan {
     
     public static void main(String[] args) {
         sf.setVisible(true);
+    }
+    
+    public static synchronized void playSound(final String url) {
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    Clip clip = AudioSystem.getClip();
+                    AudioInputStream is = AudioSystem.getAudioInputStream(
+                        Main.class.getResourceAsStream("" + url)
+                    )
+                } 
+                catch(Exception e) {
+                    
+                }
+            }
+        }) {
+            
+        }
     }
 }
