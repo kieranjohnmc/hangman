@@ -7,24 +7,29 @@ package hangman;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import javafx.util.Pair;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.JButton;
+import sun.applet.Main;
 
 /**
  *
  * @author Kieran
  */
 public class HangManJFrame extends javax.swing.JFrame {
-    
+        
     public int difficultyInt;
     
     public String testWord = "publication";
     
     /**
      * Creates new form HangManJFrame
-     */
+    */
     public HangManJFrame() {
         initComponents();
     }
@@ -33,11 +38,6 @@ public class HangManJFrame extends javax.swing.JFrame {
         initComponents();
         header.setText(user.getName());
         difficultyInt = difficulty;
-        
-        for(char c : testWord.toCharArray())
-        {
-            jLabel3.setText(jLabel3.getText() + " _" );
-        }
     }
 
     /**
@@ -89,15 +89,13 @@ public class HangManJFrame extends javax.swing.JFrame {
                 txt_submitMousePressed(evt);
             }
         });
-        txt_submit.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                txt_submitInputMethodTextChanged(evt);
-            }
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-            }
-        });
 
         btn_Submit.setText("Submit");
+        btn_Submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_SubmitActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Enter a character:");
 
@@ -190,19 +188,22 @@ public class HangManJFrame extends javax.swing.JFrame {
         txt_submit.setText("");
     }//GEN-LAST:event_txt_submitMousePressed
 
-    private void txt_submitInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_txt_submitInputMethodTextChanged
-       
-       int guessCount = 0;
+    private void btn_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SubmitActionPerformed
+           ArrayList<Character> wordList = new ArrayList<Character>();
+           char[] wordCharacters = testWord.toCharArray();
+           
+           for(char c : wordCharacters) {
+               wordList.add(c);
+           }
+           
+           
+           
+           
+
         
-       while(guessCount < 25) {
-            if(testWord.contains(txt_submit.getText())) {
-                
-            } else {
-            
-        }
-       }
-    }//GEN-LAST:event_txt_submitInputMethodTextChanged
- 
+        
+    }//GEN-LAST:event_btn_SubmitActionPerformed
+
     /**
      * @param args the command line arguments
      */

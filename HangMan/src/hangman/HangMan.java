@@ -26,22 +26,5 @@ public class HangMan {
     public static void main(String[] args) {
         sf.setVisible(true);
     }
-    
-    public static synchronized void playSound(final String url) {
-        new Thread(new Runnable() {
-            public void run() {
-                try {
-                    Clip clip = AudioSystem.getClip();
-                    AudioInputStream is = AudioSystem.getAudioInputStream(
-                        Main.class.getResourceAsStream("" + url)
-                    )
-                } 
-                catch(Exception e) {
-                    
-                }
-            }
-        }) {
-            
-        }
-    }
 }
+
