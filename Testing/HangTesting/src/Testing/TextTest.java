@@ -1,11 +1,3 @@
-/**Alter this code
- * 
- * Make it applicable for the hang_man game
- * 
- * adjust coordinates and links etc
- * 
- */
-
 package Testing;
 
 import java.awt.AWTException;
@@ -33,7 +25,8 @@ public class TextTest
 			e.printStackTrace();
 		}
 	    try {
-	    	//opens Firefox
+	    	//opens Program
+	    	Runtime.getRuntime().exec("cmd /c start C:\\Users\\Vanilla\\Documents\\GitHub\\hangman\\Testing\\Test_RoboMan.jar");
 	    	robot.delay(3000);
 		} catch (IOException e) {
 			e.printStackTrace();

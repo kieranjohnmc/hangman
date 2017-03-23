@@ -1,0 +1,23 @@
+package Testing;
+
+import java.awt.AWTException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Hard_Difficulty robotprogramme = null;
+		try {
+			robotprogramme = new Hard_Difficulty();
+		} catch (AWTException e) {
+			e.printStackTrace();
+		}
+		robotprogramme.textTester();
+	}
+	Buttons_Test robotprogramme = null;
+	{
+	robotprogramme = new Buttons_Test();
+	robotprogramme.buttonTester();
+	
+}
+}
