@@ -1,3 +1,11 @@
+/**Alter this code
+ * 
+ * Make it applicable for the hang_man game
+ * 
+ * adjust coordinates and links etc
+ * 
+ */
+
 package Testing;
 
 import java.awt.AWTException;
@@ -15,40 +23,58 @@ public class TextTest
 	private AutoClicker autoClick;
 	private Runtime runtime;
 	
-	public void drawSine() 
+	public void textTester() 
 	{
-		int xSet = 800;
-		int ySet = 400;
-		int x = 0;
-		int y = 0;
-		double alpha = 0;
 		runtime = Runtime.getRuntime();
-		
+		TextTest keyboard = null;
 		try {
-			robot = new Robot();
+			keyboard = new TextTest();
+		} catch (AWTException e) {
+			e.printStackTrace();
+		}
+	    try {
+	    	//opens Firefox
+			runtime.exec("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 			
-		    } catch (AWTException e) 
-		            {
-			          e.printStackTrace();
-	                }
-		
-			try {
-				runtime.exec("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-			} catch (IOException e) 
-			{
-				e.printStackTrace();
-			}
+			//highlights the search bar
+			robot.delay(1000);
+	        robot.keyPress(KeyEvent.VK_CONTROL);
+	        robot.keyPress(KeyEvent.VK_L);
+	        robot.keyRelease(KeyEvent.VK_L);
+	        robot.keyRelease(KeyEvent.VK_CONTROL);	    
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+        	    //The Text to be entered
+		keyboard.type("Testing Text Input ");
+	}
+	public TextTest() throws AWTException 
+	{
+		this.robot = new Robot();
 	}
 			
-			public void type(CharSequence characters) {
+			public void type(CharSequence characters) 
+			{
 		        int length = characters.length();
-		        for (int i = 0; i < length; i++) {
+		        for (int i = 0; i < length; i++) 
+		        {
 		            char character = characters.charAt(i);
 		            type(character);
 		        }
-		    }
-                    
-			        public void type(char character) {
+		        //Presses enter
+		        robot.keyPress(KeyEvent.VK_ENTER);
+		        robot.keyRelease(KeyEvent.VK_ENTER);
+		        robot.delay(2000);
+		        //Mouse moves to a location 
+		        robot.mouseMove(270, 250);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+		        robot.mouseRelease(BUTTON1_DOWN_MASK);
+		        
+		}
+                 //Case switch statement to convert characters into VK Codes  
+			        public void type(char character) 
+			        {
 			        switch (character) {
 			        case 'a': doType(VK_A); break;
 			        case 'b': doType(VK_B); break;
@@ -150,20 +176,25 @@ public class TextTest
 			        default:
 			            throw new IllegalArgumentException("Cannot type character " + character);
 			        }
+			        
 			    }
 
-			    private void doType(int... keyCodes) {
+			    private void doType(int... keyCodes) 
+			    {
 			        doType(keyCodes, 0, keyCodes.length);
 			    }
-
-			    private void doType(int[] keyCodes, int offset, int length) {
-			        if (length == 0) {
+			    
+			    private void doType(int[] keyCodes, int offset, int length) 
+			    {
+			        if (length == 0) 
+			        {
 			            return;
-			        }
-
-			        robot.keyPress(keyCodes[offset]);
+			        }  
+			        //Entering the text
+			        robot.delay(50);
+				    robot.keyPress(keyCodes[offset]);
 			        doType(keyCodes, offset + 1, length - 1);
 			        robot.keyRelease(keyCodes[offset]);
-			    }
-
+			        }
+			    
 			}
