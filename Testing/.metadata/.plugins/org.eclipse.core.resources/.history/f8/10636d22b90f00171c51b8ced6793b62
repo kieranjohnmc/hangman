@@ -34,12 +34,19 @@ public class TextTest
 		}
 	    try {
 	    	//opens Firefox
-	    	robot.delay(3000);
+			runtime.exec("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+			
+			//highlights the search bar
+			robot.delay(1000);
+	        robot.keyPress(KeyEvent.VK_CONTROL);
+	        robot.keyPress(KeyEvent.VK_L);
+	        robot.keyRelease(KeyEvent.VK_L);
+	        robot.keyRelease(KeyEvent.VK_CONTROL);	    
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
         	    //The Text to be entered
-		keyboard.type("Callum");	
+		keyboard.type("Testing Text Input ");
 	}
 	public TextTest() throws AWTException 
 	{
@@ -59,13 +66,7 @@ public class TextTest
 		        robot.keyRelease(KeyEvent.VK_ENTER);
 		        robot.delay(2000);
 		        //Mouse moves to a location 
-		        robot.mouseMove(129, 129);
-		        robot.mousePress(BUTTON1_DOWN_MASK);
-		        robot.delay(1000);
-		        robot.mouseMove(122, 189);
-		        robot.mouseRelease(BUTTON1_DOWN_MASK);
-		        robot.delay(1000);
-		        robot.mouseMove(165, 165);
+		        robot.mouseMove(270, 250);
 		        robot.mousePress(BUTTON1_DOWN_MASK);
 		        robot.delay(1000);
 		        robot.mouseRelease(BUTTON1_DOWN_MASK);

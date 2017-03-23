@@ -34,12 +34,13 @@ public class TextTest
 		}
 	    try {
 	    	//opens Firefox
+	    	Runtime.getRuntime().exec("cmd /c start C:\\Users\\Vanilla\\Desktop\\Test_RoboMan.jar");
 	    	robot.delay(3000);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
         	    //The Text to be entered
-		keyboard.type("Callum");	
+		keyboard.type("Callum ^_^");	
 	}
 	public TextTest() throws AWTException 
 	{
@@ -59,6 +60,7 @@ public class TextTest
 		        robot.keyRelease(KeyEvent.VK_ENTER);
 		        robot.delay(2000);
 		        //Mouse moves to a location 
+		        robot.mouseMove(105, 0);
 		        robot.mouseMove(129, 129);
 		        robot.mousePress(BUTTON1_DOWN_MASK);
 		        robot.delay(1000);
