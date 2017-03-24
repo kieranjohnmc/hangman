@@ -12,38 +12,31 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Dumping database structure for hangman
-CREATE DATABASE IF NOT EXISTS `hangman` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `hangman`;
+-- Dumping database structure for hangman_db
+CREATE DATABASE IF NOT EXISTS `hangman_db` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `hangman_db`;
 
--- Dumping structure for table hangman.users
+-- Dumping structure for table hangman_db.users
 CREATE TABLE IF NOT EXISTS `users` (
-  `UserID` int(11) NOT NULL AUTO_INCREMENT,
-  `VName` varchar(50) DEFAULT NULL,
-  `Score` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COMMENT='Table for users';
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text,
+  `score` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table hangman.users: ~0 rows (approximately)
+-- Dumping data for table hangman_db.users: ~0 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
--- Dumping structure for table hangman.words
+-- Dumping structure for table hangman_db.words
 CREATE TABLE IF NOT EXISTS `words` (
-  `Words` int(11) NOT NULL AUTO_INCREMENT,
-  `Word` text,
-  `Text` text,
-  PRIMARY KEY (`Words`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COMMENT='Table of words';
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `word` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table hangman.words: ~5 rows (approximately)
+-- Dumping data for table hangman_db.words: ~0 rows (approximately)
 /*!40000 ALTER TABLE `words` DISABLE KEYS */;
-REPLACE INTO `words` (`Words`, `Word`, `Text`) VALUES
-	(1, 'GREEN', NULL),
-	(2, 'HOUSE', NULL),
-	(3, 'ELEPHANT', NULL),
-	(4, 'PILGRIM', NULL),
-	(5, 'MONOLITH', NULL);
 /*!40000 ALTER TABLE `words` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

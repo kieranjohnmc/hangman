@@ -38,6 +38,10 @@ public class HangManJFrame extends javax.swing.JFrame {
         initComponents();
         header.setText(user.getName());
         difficultyInt = difficulty;
+        
+        for(char c : testWord.toCharArray()) {
+            jLabel3.setText(jLabel3.getText() + "_ ");
+        }
     }
 
     /**
@@ -176,7 +180,10 @@ public class HangManJFrame extends javax.swing.JFrame {
             txt_submit.setText("Intermediate difficulty set!");
         
         if(gDiff == 2)
-            txt_submit.setText("Hard difficulty set!");          
+            txt_submit.setText("Hard difficulty set!");
+
+
+        
     }//GEN-LAST:event_onLoad
 
     private void alphabetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_alphabetMouseClicked
@@ -189,19 +196,7 @@ public class HangManJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_submitMousePressed
 
     private void btn_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SubmitActionPerformed
-           ArrayList<Character> wordList = new ArrayList<Character>();
-           char[] wordCharacters = testWord.toCharArray();
-           
-           for(char c : wordCharacters) {
-               wordList.add(c);
-           }
-           
-           
-           
-           
-
-        
-        
+          
     }//GEN-LAST:event_btn_SubmitActionPerformed
 
     /**
