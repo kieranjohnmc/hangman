@@ -40,6 +40,11 @@ public class StartupForm extends javax.swing.JFrame {
         lbl_decision.setText("Select a difficulty:");
 
         btn_exit.setText("Exit");
+        btn_exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_exitActionPerformed(evt);
+            }
+        });
 
         btn_go.setText("Go");
         btn_go.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +112,7 @@ public class StartupForm extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_goActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_goActionPerformed
@@ -116,6 +122,11 @@ public class StartupForm extends javax.swing.JFrame {
         
         this.setVisible(false);
     }//GEN-LAST:event_btn_goActionPerformed
+
+    private void btn_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exitActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btn_exitActionPerformed
 
     /**
      * @param args the command line arguments
