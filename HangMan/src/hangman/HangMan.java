@@ -20,11 +20,10 @@ public class HangMan {
     /**
      * @param args the command line arguments
      */
-    
+
     public static StartupForm sf = new StartupForm();
-    
+
     public static void main(String[] args) {
         sf.setVisible(true);
     }
 }
-

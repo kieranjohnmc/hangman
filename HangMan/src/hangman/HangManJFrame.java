@@ -16,34 +16,34 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JButton;
-<<<<<<< HEAD
+
 import sun.applet.Main;
-=======
+
 import javax.swing.JOptionPane;
->>>>>>> origin/Kieran
+
 
 /**
  *
  * @author Kieran
  */
 public class HangManJFrame extends javax.swing.JFrame {
-        
+
     public int difficultyInt;
-    
+
     public String testWord = "publication";
-    
+
     /**
      * Creates new form HangManJFrame
     */
     public HangManJFrame() {
         initComponents();
     }
-    
+
     public HangManJFrame(User user, int difficulty) {
         initComponents();
         header.setText(user.getName());
         difficultyInt = difficulty;
-        
+
         for(char c : testWord.toCharArray()) {
             jLabel3.setText(jLabel3.getText() + "_ ");
         }
@@ -146,7 +146,6 @@ public class HangManJFrame extends javax.swing.JFrame {
                 txt_submitMousePressed(evt);
             }
         });
-<<<<<<< HEAD
 
         btn_Submit.setText("Submit");
         btn_Submit.addActionListener(new java.awt.event.ActionListener() {
@@ -154,8 +153,6 @@ public class HangManJFrame extends javax.swing.JFrame {
                 btn_SubmitActionPerformed(evt);
             }
         });
-
-=======
         txt_submit.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
@@ -164,7 +161,6 @@ public class HangManJFrame extends javax.swing.JFrame {
             }
         });
 
->>>>>>> origin/Kieran
         jLabel1.setText("Enter a character:");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -254,17 +250,17 @@ public class HangManJFrame extends javax.swing.JFrame {
         int gDiff = difficultyInt;
         // TODO code application logic here
         System.out.println(difficultyInt);
-        if(gDiff == 0) 
+        if(gDiff == 0)
            txt_submit.setText("Easy difficulty set!");
-        
+
         if(gDiff == 1)
             txt_submit.setText("Intermediate difficulty set!");
-        
+
         if(gDiff == 2)
             txt_submit.setText("Hard difficulty set!");
 
 
-        
+
     }//GEN-LAST:event_onLoad
 
     private void alphabetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_alphabetMouseClicked
@@ -276,21 +272,20 @@ public class HangManJFrame extends javax.swing.JFrame {
         txt_submit.setText("");
     }//GEN-LAST:event_txt_submitMousePressed
 
-<<<<<<< HEAD
+
     private void btn_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SubmitActionPerformed
-          
+
     }//GEN-LAST:event_btn_SubmitActionPerformed
 
-=======
     private void txt_submitInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_txt_submitInputMethodTextChanged
-       
+
        int guessCount = 0;
-        
+
        while(guessCount < 25) {
             if(testWord.contains(txt_submit.getText())) {
-                
+
             } else {
-            
+
         }
        }
     }//GEN-LAST:event_txt_submitInputMethodTextChanged
@@ -316,8 +311,7 @@ public class HangManJFrame extends javax.swing.JFrame {
             pmMenu.show(this,evt.getX(),evt.getY());
         }
     }//GEN-LAST:event_formMouseReleased
- 
->>>>>>> origin/Kieran
+
     /**
      * @param args the command line arguments
      */
@@ -325,7 +319,7 @@ public class HangManJFrame extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
