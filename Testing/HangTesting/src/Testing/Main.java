@@ -9,7 +9,13 @@ public class Main {
 		int test = 0;
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("Pick a number: ");
+		System.out.println("Choose a Test: ");
+		System.out.println("1. Easy Test");
+		System.out.println("2. Intermediate Test");
+		System.out.println("3. Hard Test");
+		System.out.println("4. Lose Test");
+		System.out.println("5. Exit");
+
 		test = input.nextInt();
 		
 		String testString = null;
@@ -20,7 +26,11 @@ public class Main {
 				break;
 		case 3: Hard();
 				break;
-		default: 
+		case 4: LoseTest();
+				break;
+		case 5: Exit();
+				break;
+		default: System.out.println("Choose Again ");
 		}
         System.out.println(testString); 
         input.close();
@@ -58,5 +68,18 @@ public class Main {
 		robotprogramme.hardDifficulty();
 	}
 	
+	public static void LoseTest() {
+		LoseTest robotprogramme = null;
+		try {
+			robotprogramme = new LoseTest();
+		} catch (AWTException e) {
+			e.printStackTrace();
+		}
+		robotprogramme.loseTest();
+	}
+	
+	public static void Exit() {
+		System.exit(0);
+	}
 
 }

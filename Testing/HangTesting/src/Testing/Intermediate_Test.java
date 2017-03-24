@@ -4,6 +4,8 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+
+import static java.awt.event.InputEvent.BUTTON1_DOWN_MASK;
 import static java.awt.event.KeyEvent.*;
 
 
@@ -25,13 +27,13 @@ public class Intermediate_Test
 		}
 	    try {
 	    	//opens Program
-	    	Runtime.getRuntime().exec("cmd /c start C:\\Users\\Vanilla\\Documents\\GitHub\\hangman\\Testing\\Test_RoboMan.jar");
+	    	Runtime.getRuntime().exec("cmd /c start C:\\Users\\Vanilla\\Documents\\GitHub\\hangman\\Testing\\test.jar");
 	    	robot.delay(3000);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
         	    //The Text to be entered
-		keyboard.type("Not Callum");	
+		keyboard.type("Callum");	
 	}
 	public Intermediate_Test() throws AWTException 
 	{
@@ -50,17 +52,122 @@ public class Intermediate_Test
 		        robot.keyPress(KeyEvent.VK_ENTER);
 		        robot.keyRelease(KeyEvent.VK_ENTER);
 		        robot.delay(2000);
+		        
 		        //Mouse moves to a location 
-		        robot.mouseMove(129, 129);
+		        robot.mouseMove(780, 466);
 		        robot.mousePress(BUTTON1_DOWN_MASK);
 		        robot.delay(1000);
-		        robot.mouseMove(60, 173);
+		        robot.mouseMove(798, 507);
 		        robot.mouseRelease(BUTTON1_DOWN_MASK);
 		        robot.delay(1000);
-		        robot.mouseMove(165, 165);
+		        robot.mouseMove(843, 500);
 		        robot.mousePress(BUTTON1_DOWN_MASK);
 		        robot.delay(1000);
-		        robot.mouseRelease(BUTTON1_DOWN_MASK);
+		        robot.mouseRelease(BUTTON1_DOWN_MASK); 
+		        
+		        //Hangman man form 
+		        //Help
+		        
+		        robot.delay(1000);
+		        robot.mouseMove(1144, 560);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+		        robot.mouseMove(800, 498);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+
+		        
+		        //P
+		        
+		        robot.delay(1000);
+		        robot.mouseMove(566, 635);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.keyPress(KeyEvent.VK_P);
+		        robot.keyRelease(KeyEvent.VK_P);
+		        robot.delay(1000);
+		        robot.mouseMove(1143, 624);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+		        
+		        //C
+		        
+		        robot.delay(1000);
+		        robot.mouseMove(566, 635);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.keyPress(KeyEvent.VK_C);
+		        robot.keyRelease(KeyEvent.VK_C);
+		        robot.delay(1000);
+		        robot.mouseMove(1143, 624);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+		        
+		        //O
+		        
+		        robot.delay(1000);
+		        robot.mouseMove(566, 635);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.keyPress(KeyEvent.VK_O);
+		        robot.keyRelease(KeyEvent.VK_O);
+		        robot.delay(1000);
+		        robot.mouseMove(1143, 624);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+
+		        //T
+		        
+		        robot.delay(1000);
+		        robot.mouseMove(566, 635);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.keyPress(KeyEvent.VK_T);
+		        robot.keyRelease(KeyEvent.VK_T);
+		        robot.delay(1000);
+		        robot.mouseMove(1143, 624);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+		        
+
+		        //I
+		        
+		        robot.delay(1000);
+		        robot.mouseMove(566, 635);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.keyPress(KeyEvent.VK_I);
+		        robot.keyRelease(KeyEvent.VK_I);
+		        robot.delay(1000);
+		        robot.mouseMove(1143, 624);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+		        
+
+		        //A
+		        
+		        robot.delay(1000);
+		        robot.mouseMove(566, 635);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.keyPress(KeyEvent.VK_A);
+		        robot.keyRelease(KeyEvent.VK_A);
+		        robot.delay(1000);
+		        robot.mouseMove(1143, 624);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+		        
+		        //Guess Word
+		        
+		        robot.delay(1000);
+		        robot.mouseMove(566, 635);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        
+		        robot.delay(1000);
+				robot.mouseMove(1143, 624);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+		        
+		        //Exit
+		        robot.delay(1000);
+		        robot.mouseMove(1153, 200);
+		        robot.mousePress(BUTTON1_DOWN_MASK);
+		        robot.delay(1000);
+		        
 		        
 		}
                  //Case switch statement to convert characters into VK Codes  
